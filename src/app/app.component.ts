@@ -47,7 +47,11 @@ export class AppComponent implements OnInit {
   }
 
   atualizar(cidade: any) {
-    alert(JSON.stringify(cidade));
+    this.cidadeService.atualizar(cidade)
+    .then(c => {
+      alert(`Cidade "${c.nome}" alterada com sucesso!`);
+    });
+
   }
 
 }
