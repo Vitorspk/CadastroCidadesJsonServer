@@ -50,6 +50,9 @@ export class AppComponent implements OnInit {
     this.cidadeService.atualizar(cidade)
     .then(c => {
       alert(`Cidade "${c.nome}" alterada com sucesso!`);
+    })
+    .catch(erro => {
+      alert(erro);
     });
 
   }
